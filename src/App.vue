@@ -17,22 +17,22 @@
 			</div>
 
 			<div class="links">
-				<a class="a" href="">
+				<a class="a" href="https://www.facebook.com/legioxequestris">
 					<Icon :icon="['fab', 'facebook']" class="icon"/>
 				</a>
-				<a class="a" href="">
+				<a class="a" href="https://github.com/windwalk-bushido/">
 					<Icon :icon="['fab', 'github']" class="icon"/>
 				</a>
-				<a class="a" href="">
+				<a class="a" href="https://www.instagram.com/windwalk.ext4/">
 					<Icon :icon="['fab', 'instagram']" class="icon"/>
 				</a>
-				<a class="a" href="">
+				<a class="a" href="https://fosstodon.org/web/accounts/243125">
 					<Icon :icon="['fab', 'mastodon']" class="icon"/>
 				</a>
-				<a class="a" href="">
+				<a class="a" href="mailto:milijan-mosic@protonmail.com">
 					<Icon :icon="['fas', 'envelope']" class="icon"/>
 				</a>
-				<a class="a" href="">
+				<a class="a" href="https://github.com/windwalk-bushido/Digital-ID">
 					<Icon :icon="['fas', 'code']" class="icon"/>
 				</a>
 			</div>
