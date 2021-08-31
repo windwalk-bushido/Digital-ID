@@ -79,29 +79,29 @@
 
 	.heading
 	{
-		@apply m-0 p-0 text-center text-5xl font-semibold -mt-2 mb-8 shadow-xl pb-4 rounded-bl-3xl rounded-br-3xl;
+		@apply -mt-2 mb-8 pb-4 rounded-bl-3xl rounded-br-3xl shadow-xl text-center text-5xl font-semibold;
 	}
 
 	.dots
 	{
-		@apply flex flex-col justify-center items-center text-2xl mb-8 shadow-xl pb-4 rounded-bl-3xl rounded-br-3xl;
+		@apply flex flex-col justify-center items-center mb-8 pb-4 rounded-bl-3xl rounded-br-3xl shadow-xl text-2xl;
 	}
 
 	.links
 	{
-		@apply grid grid-cols-3 gap-4 place-items-center mb-8 shadow-xl pb-4 rounded-bl-3xl rounded-br-3xl;
+		@apply grid grid-cols-3 gap-4 place-items-center mb-8 pb-4 rounded-bl-3xl rounded-br-3xl shadow-xl;
 	}
 
 	.a 
 	{
-		@apply bg-purple-900 p-6 w-16 h-16 rounded-full hover:bg-purple-600 flex justify-center align-middle items-center;
+		@apply flex justify-center align-middle items-center w-16 h-16 p-6 rounded-full bg-purple-900 hover:bg-purple-600;
 
 		transition: all 150ms;
 	}
 
 	.icon
 	{
-		@apply text-white text-4xl;
+		@apply text-4xl text-white;
 	}
 
 	.a:hover
@@ -115,12 +115,12 @@
 
 	.footer
 	{
-		@apply flex flex-row justify-center align-top text-xl pb-2;
+		@apply flex flex-row justify-center align-top pb-2 text-xl;
 	}
 
 	.year
 	{
-		@apply ml-4 mr-4
+		@apply ml-4 mr-4;
 	}
 
 	.btn-icon
