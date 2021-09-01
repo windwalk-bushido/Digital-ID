@@ -180,7 +180,7 @@
 
 		.modal
 		{
-			@apply flex flex-row justify-between mt-32 rounded-3xl shadow-lg; /* delete mt-32 - adjust position properly. */
+			@apply flex flex-row justify-between mt-40 rounded-3xl shadow-lg; /* delete mt-40 - adjust position properly. */
 
 			width: 1024px;
 			height: 512px;
@@ -220,7 +220,7 @@
 
 		.links
 		{
-			@apply pt-8 pb-8;
+			@apply h-80 pt-8 pb-8;
 		}
 
 		.a
