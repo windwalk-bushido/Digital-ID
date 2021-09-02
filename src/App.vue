@@ -2,7 +2,7 @@
 
 	<video class="gif" width="100%" height="100%" frameborder="0" src="./assets/japan_train.gif" autoplay muted loop></video>
 
-	<div class="modal">
+	<div class="modal" :class="{ 'HIDE' : hide_modal, 'SHOW' : show_modal }">
 		<div class="main">
 			<img class="img" src="./assets/samurai.png">
 
@@ -38,18 +38,20 @@
 			</div>
 
 			<div class="footer">
-				<button class="btn_mode">
-					<Icon :icon="['fas', 'sun']" class="btn-icon"/>
-				</button>
+				<div class="div-btn-hide">
+					<button class="btn_hide" @click="ShowBackground()">
+						<Icon :icon="['fas', 'eye']" class="btn-icon"/>
+					</button>
+				</div>
 
 				<p class="year">2021.</p>
-
-				<button class="btn_hide">
-					<Icon :icon="['fas', 'eye']" class="btn-icon"/>
-				</button>
 			</div>
 		</div>
 	</div>
+	
+	<button class="btn-show hide-for-mobile" :class="{ 'HIDE' : hide_btn, 'SHOW' : show_btn }" @click="ShowModal()">
+		<Icon :icon="['fas', 'eye-slash']" class="icon-show"/>
+	</button>
 
 </template>
 
@@ -61,6 +63,31 @@
 	{
 		name: "App",
 		//components: { Componenta },
+		data()
+		{
+			return { hide_btn: true, show_button: false, show_modal: true, hide_modal: false }
+		},
+
+		methods:
+		{
+			ShowBackground()
+			{
+				this.hide_btn = false;
+				this.show_button = true;
+
+				this.show_modal = false;
+				this.hide_modal = true;
+			},
+
+			ShowModal()
+			{
+				this.hide_btn = true;
+				this.show_button = false;
+
+				this.show_modal = true;
+				this.hide_modal = false;
+			}
+		},
 	}
 
 </script>
@@ -136,17 +163,30 @@
 
 	.footer
 	{
-		@apply flex flex-row justify-center align-top pt-8 pb-4 text-xl;
+		@apply flex flex-row flex-wrap justify-center align-top pt-8 text-xl;
 	}
 
 	.year
 	{
-		@apply ml-4 mr-4;
+		@apply ml-4 mr-4 text-center;
+	}
+
+	.div-btn-hide
+	{
+		@apply flex justify-center w-full;
 	}
 
 	.btn-icon
 	{
-		@apply text-3xl;
+		@apply text-3xl cursor-default;
+	}
+
+	.hide-for-mobile
+	{
+		@apply opacity-0 cursor-default;
+		
+		position: absolute;
+		z-index: -20;
 	}
 
 	@media only screen and (min-width: 320px) and (max-width: 413px)
@@ -180,7 +220,7 @@
 
 		.modal
 		{
-			@apply flex flex-row justify-between mt-40 rounded-3xl shadow-lg; /* delete mt-40 - adjust position properly. */
+			@apply flex flex-row justify-between mt-6 rounded-3xl shadow-lg;
 
 			width: 1024px;
 			height: 512px;
@@ -240,9 +280,55 @@
 			@apply bg-none;
 		}
 
-		.year
+		.footer
 		{
-			@apply font-semibold;
+			@apply pt-5;
+		}
+
+		.btn-show
+		{
+			@apply flex flex-row justify-center items-center w-12 h-12 rounded-3xl text-xl bg-purple-900 text-white hover:bg-purple-600;
+
+			bottom: 2rem;
+			left: 2rem;
+			position: absolute;
+
+			transition: all 150ms;
+		}
+
+		.btn-show:hover 
+		{
+			box-shadow: 0px 8px 8px 0px rgba(76, 29, 149, 0.75);
+			-webkit-box-shadow: 0px 8px 8px 0px rgba(76, 29, 149, 0.75);
+			-moz-box-shadow: 0px 8px 8px 0px rgba(76, 29, 149, 0.75);
+
+			transition: all 150ms;
+		}
+
+		.btn-icon
+		{
+			@apply cursor-pointer;
+		}
+
+		.hide-for-mobile
+		{
+			@apply opacity-100 cursor-pointer;
+
+			z-index: unset;
+		}
+
+		.HIDE
+		{
+			@apply opacity-0;
+
+			z-index: -20;
+		}
+
+		.SHOW
+		{
+			@apply opacity-100;
+
+			z-index: 10;
 		}
 	}
 
