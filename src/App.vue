@@ -322,6 +322,7 @@
 			@apply opacity-0;
 
 			z-index: -20;
+			transition: all .5s;
 		}
 
 		.SHOW
@@ -329,6 +330,7 @@
 			@apply opacity-100;
 
 			z-index: 10;
+			transition: all .5s;
 		}
 	}
 
