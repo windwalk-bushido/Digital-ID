@@ -1,24 +1,15 @@
-# digital-id-mos
+# Digital-ID
 
-## Project setup
-```
-npm install
-```
+## How to clone & use project
 
-### Compiles and hot-reloads for development
-```
+Requirements:
+
+- Npm
+- NodeJS
+
+```sh
+git clone https://github.com/windwalk-bushido/Digital-ID.git
+cd Digital-ID/
+npm i
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
